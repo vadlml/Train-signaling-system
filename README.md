@@ -1,29 +1,27 @@
 # Simulation of a Train Signaling System:
 
-## Build
+### Build
 ```bash
 git clone https://github.com/vadlml/Train-signaling-system.git
 cd Train-signaling-system
-
-```
-
-----------
-
-```bash
 mkdir build && cd build
 cmake ../
 make 
 ```
-## Requirements
-## nlohmann_json version "3.9.1": https://github.com/nlohmann/json
+### Requirements:
+```
+nlohmann_json version "3.9.1"
+```
 
-
-## Usage: ./TrainSig [FILE]... [OPTION]... 
-## Options: 
-##         -v - verbose output with event log messages;
-## Example: ./TrainSig input.json
-
-## Prerequisites:
+### Usage: 
+```
+./TrainSig [FILE]... [OPTION]... 
+Options: 
+         -v - verbose output with event log messages;
+Example: ./TrainSig input.json
+```
+### Prerequisites:
+```
 - Each track segment consist of of two track points linked one to each other
 - All track segments are equal length
 - Each track line consists of one or more track segments 
@@ -33,11 +31,11 @@ make
 - All trains are one track long 
 - All trains are moving with same speed
 - All junctions can direct train traffic only to one of the forked tracks at any given time.
+```
 
-
-## Input JSON file example:
----
-## input.json
+### Input JSON file example:
+```
+input.json
 {
 	"lines": [
 		[0,1,2,3,4,5,6],
@@ -66,8 +64,9 @@ make
 		}
 	]
 }
----
-Correcponds to the following track map:
+```
+#### Corresponds to the following track lines:
+
 ```
     (T0)          (S0)
 (0)--(1)--(2)--(3)--(4)--(5)--(6)
@@ -75,5 +74,6 @@ Correcponds to the following track map:
                (7)--(8--(9) 
                 (S1)    (T1)
 ```
-#### Where: (T0), (T1) - train0 and train1
-####        (S0), (S1) - Signal1 and Signal2
+#### Where: 
+##### (T0), (T1) - Train0 and Train1
+##### (S0), (S1) - Signal1 and Signal2
