@@ -32,21 +32,6 @@ public:
 	};
 
 	/**
-	 * @brief Trains class constructor
-	 *
-	 * @param subject - subject to subscribe this train to
-	 * @param  id - train's id
-	 * @param  dir - train's direction
-	 * @param  start_point - a pointer to train's starting point
-	 */
-	Train(HeartBeatSubject &subject, int id, Direction dir,
-			std::shared_ptr<TrackPoint> start_point) :
-			HeartBeatObserver(subject), _id(id), _dir(dir), _curr_point(
-					start_point)
-	{
-		_curr_point->occupy();
-	}
-	/**
 	 * @brief instantiates a train object and subscribes it to an observer subject
 	 *
 	 * @param subject - subject to subscribe this train to
@@ -58,7 +43,7 @@ public:
 	static std::shared_ptr<Train> create(HeartBeatSubject &subject, int id,
 			Direction dir, std::shared_ptr<TrackPoint> start_point)
 	{
-		auto ptr = std::make_shared<Train>(subject, id, dir, start_point);
+		auto ptr = std::shared_ptr<Train>(new Train(subject, id, dir, start_point));
 		subject.attach(ptr);
 		return ptr;
 	}
@@ -99,6 +84,21 @@ public:
 	virtual ~Train() = default;
 
 private:
+	/**
+	 * @brief Trains class constructor
+	 *
+	 * @param subject - subject to subscribe this train to
+	 * @param  id - train's id
+	 * @param  dir - train's direction
+	 * @param  start_point - a pointer to train's starting point
+	 */
+	Train(HeartBeatSubject &subject, int id, Direction dir,
+			std::shared_ptr<TrackPoint> start_point) :
+			HeartBeatObserver(subject), _id(id), _dir(dir), _curr_point(
+					start_point)
+	{
+		_curr_point->occupy();
+	}
 	int _id;
 	State _state = STATE_RUNNING;
 	Direction _dir = DIR_FORWARD;

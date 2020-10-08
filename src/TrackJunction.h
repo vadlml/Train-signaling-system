@@ -25,17 +25,6 @@ public:
 	};
 
 	/**
-	 * @brief track junction constructor
-	 *
-	 * @param subject - subject to subscribe this junction to
-	 * @param  id - junction's id
-	 */
-	TrackJunction(HeartBeatSubject &subject, int id) :
-			TrackPoint(id), HeartBeatObserver(subject)
-	{
-	}
-
-	/**
 	 * @brief instantiates a junction object and subscribes it to an observer subject
 	 *
 	 * @param subject - subject to subscribe this junction to
@@ -45,7 +34,7 @@ public:
 	static std::shared_ptr<TrackJunction> create(HeartBeatSubject &subject,
 			int id)
 	{
-		auto ptr = std::make_shared<TrackJunction>(subject, id);
+		auto ptr = std::shared_ptr<TrackJunction>(new TrackJunction(subject, id));
 		subject.attach(ptr);
 		return ptr;
 	}
@@ -85,6 +74,16 @@ public:
 	}
 
 private:
+	/**
+	 * @brief track junction constructor
+	 *
+	 * @param subject - subject to subscribe this junction to
+	 * @param  id - junction's id
+	 */
+	TrackJunction(HeartBeatSubject &subject, int id) :
+			TrackPoint(id), HeartBeatObserver(subject)
+	{
+	}
 	SwitchPosition _switch_pos = SWITCH_POS_MAIN;
 	std::shared_ptr<TrackPoint> _next_secondary = nullptr;
 };

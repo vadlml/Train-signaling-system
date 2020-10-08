@@ -14,7 +14,7 @@
 using namespace std;
 
 /**
- * @brief Get accepts the visitor object and runs on needed visiting method
+ * @brief accepts the visitor object and runs the needed visiting method on it
  *
  * @param visitor - visitor object
  * @return void

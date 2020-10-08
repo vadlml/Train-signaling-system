@@ -75,6 +75,7 @@ SimulRunner::SimulRunner(const basic_string<char> &in_file_path)
 			}
 		}
 	}
+	in_file.close();
 }
 
 /**

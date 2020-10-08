@@ -27,19 +27,6 @@ public:
 	};
 
 	/**
-	 * @brief Signal class constructor
-	 *
-	 * @param subject - subject to subscribe this signal to
-	 * @param id - signal's id
-	 * @param track_point - a pointer to the associated with this signal track point object
-	 */
-	Signal(HeartBeatSubject &subject, int id,
-			std::shared_ptr<TrackPoint> track_point) :
-			HeartBeatObserver(subject), _id(id), _track_point(track_point)
-	{
-	}
-
-	/**
 	 * @brief instantiates a Signal object and subscribes it to an observer subject
 	 *
 	 * @param subject - subject to subscribe this signal to
@@ -50,7 +37,7 @@ public:
 	static std::shared_ptr<Signal> create(HeartBeatSubject &subject, int id,
 			std::shared_ptr<TrackPoint> track_point)
 	{
-		auto ptr = std::make_shared<Signal>(subject, id, track_point);
+		auto ptr = std::shared_ptr<Signal>(new Signal(subject, id, track_point));
 		subject.attach(ptr);
 		ptr->get_track_point()->set_signal(ptr);
 		return ptr;
@@ -80,6 +67,18 @@ public:
 
 	virtual ~Signal() = default;
 private:
+	/**
+	 * @brief Signal class constructor
+	 *
+	 * @param subject - subject to subscribe this signal to
+	 * @param id - signal's id
+	 * @param track_point - a pointer to the associated with this signal track point object
+	 */
+	Signal(HeartBeatSubject &subject, int id,
+			std::shared_ptr<TrackPoint> track_point) :
+			HeartBeatObserver(subject), _id(id), _track_point(track_point)
+	{
+	}
 	int _id;
 	std::shared_ptr<TrackPoint> _track_point;
 	State _state = STATE_GREEN;
