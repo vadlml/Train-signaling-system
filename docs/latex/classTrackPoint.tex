@@ -1,0 +1,67 @@
+\hypertarget{classTrackPoint}{}\doxysection{Track\+Point Class Reference}
+\label{classTrackPoint}\index{TrackPoint@{TrackPoint}}
+Inheritance diagram for Track\+Point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classTrackPoint}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTrackPoint_a2e567594e48ce98122283b2ffcfcca95}\label{classTrackPoint_a2e567594e48ce98122283b2ffcfcca95}} 
+{\bfseries Track\+Point} (int id)
+\item 
+\mbox{\Hypertarget{classTrackPoint_addb723b587791fe51e09a27cb667d8b5}\label{classTrackPoint_addb723b587791fe51e09a27cb667d8b5}} 
+void {\bfseries set\+\_\+next} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ next)
+\item 
+\mbox{\Hypertarget{classTrackPoint_acb924d600d426d1416b5113a8446feb8}\label{classTrackPoint_acb924d600d426d1416b5113a8446feb8}} 
+void {\bfseries set\+\_\+prev} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ prev)
+\item 
+\mbox{\Hypertarget{classTrackPoint_aa2adde611b3ed8d2d49b94c1a805f7f6}\label{classTrackPoint_aa2adde611b3ed8d2d49b94c1a805f7f6}} 
+virtual const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ {\bfseries get\+\_\+next} () const
+\item 
+\mbox{\Hypertarget{classTrackPoint_a4a772db8afb2813eda046632b622e030}\label{classTrackPoint_a4a772db8afb2813eda046632b622e030}} 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ {\bfseries get\+\_\+prev} () const
+\item 
+\mbox{\Hypertarget{classTrackPoint_af8b35229dfde9515aae392513b2fdbd8}\label{classTrackPoint_af8b35229dfde9515aae392513b2fdbd8}} 
+int {\bfseries get\+\_\+occupancy} (void) const
+\item 
+\mbox{\Hypertarget{classTrackPoint_a9643f6ca0d33a32e94f865a16d4d7e5b}\label{classTrackPoint_a9643f6ca0d33a32e94f865a16d4d7e5b}} 
+void {\bfseries occupy} (void)
+\item 
+\mbox{\Hypertarget{classTrackPoint_a124167ad14e707bd9aaba72bfea6ef18}\label{classTrackPoint_a124167ad14e707bd9aaba72bfea6ef18}} 
+void {\bfseries release} (void)
+\item 
+\mbox{\Hypertarget{classTrackPoint_a1fb39ed37b8ba5c7851292edc442d942}\label{classTrackPoint_a1fb39ed37b8ba5c7851292edc442d942}} 
+int {\bfseries get\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classTrackPoint_a115c5154bd74080831dfe67f90d725b8}\label{classTrackPoint_a115c5154bd74080831dfe67f90d725b8}} 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSignal}{Signal}} $>$ \& {\bfseries get\+\_\+signal} () const
+\item 
+\mbox{\Hypertarget{classTrackPoint_a851e657d9c96355d2c9d568d00c45a90}\label{classTrackPoint_a851e657d9c96355d2c9d568d00c45a90}} 
+void {\bfseries set\+\_\+signal} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSignal}{Signal}} $>$ signal)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTrackPoint_a801cbd9440b4d956d3ef7a064f69e0f2}\label{classTrackPoint_a801cbd9440b4d956d3ef7a064f69e0f2}} 
+int {\bfseries \+\_\+id}
+\item 
+\mbox{\Hypertarget{classTrackPoint_aff3dba81f84e34f89f1109848bbca9c7}\label{classTrackPoint_aff3dba81f84e34f89f1109848bbca9c7}} 
+int {\bfseries \+\_\+occupancy\+\_\+counter} = 0
+\item 
+\mbox{\Hypertarget{classTrackPoint_a2a466b22d52516ea5c8ba4cfe0bad93e}\label{classTrackPoint_a2a466b22d52516ea5c8ba4cfe0bad93e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSignal}{Signal}} $>$ {\bfseries \+\_\+signal} = nullptr
+\item 
+\mbox{\Hypertarget{classTrackPoint_a7708e8ad2bc7c4910e17a24de3d340f3}\label{classTrackPoint_a7708e8ad2bc7c4910e17a24de3d340f3}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ {\bfseries \+\_\+next} = nullptr
+\item 
+\mbox{\Hypertarget{classTrackPoint_aff4a8393eb87508c6ed07ac73531b0c1}\label{classTrackPoint_aff4a8393eb87508c6ed07ac73531b0c1}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ {\bfseries \+\_\+prev} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{TrackPoint_8h}{Track\+Point.\+h}}\end{DoxyCompactItemize}

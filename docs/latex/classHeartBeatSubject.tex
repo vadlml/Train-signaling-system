@@ -1,0 +1,74 @@
+\hypertarget{classHeartBeatSubject}{}\doxysection{Heart\+Beat\+Subject Class Reference}
+\label{classHeartBeatSubject}\index{HeartBeatSubject@{HeartBeatSubject}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classHeartBeatSubject_a1b82bfbc63f1c965e101659938edc3d7}{attach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractObserver}{Abstract\+Observer}} $>$ obs)
+\begin{DoxyCompactList}\small\item\em Subscribes observer object to the current subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeartBeatSubject_adf2af29bb4845555acbb73498b4d7d7d}{detach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractObserver}{Abstract\+Observer}} $>$ obs)
+\begin{DoxyCompactList}\small\item\em Unsubscribes observer object from the current subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHeartBeatSubject_aeb1863b4d595a9e16cc0e3e099c67d68}{notify\+\_\+all}} (std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}} $>$$>$ visitors)
+\begin{DoxyCompactList}\small\item\em Notifies all registered observers about the heart beat event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHeartBeatSubject_a1b82bfbc63f1c965e101659938edc3d7}\label{classHeartBeatSubject_a1b82bfbc63f1c965e101659938edc3d7}} 
+\index{HeartBeatSubject@{HeartBeatSubject}!attach@{attach}}
+\index{attach@{attach}!HeartBeatSubject@{HeartBeatSubject}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Heart\+Beat\+Subject\+::attach (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractObserver}{Abstract\+Observer}} $>$}]{obs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subscribes observer object to the current subject. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obs} & -\/ observer object to be subscribed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHeartBeatSubject_adf2af29bb4845555acbb73498b4d7d7d}\label{classHeartBeatSubject_adf2af29bb4845555acbb73498b4d7d7d}} 
+\index{HeartBeatSubject@{HeartBeatSubject}!detach@{detach}}
+\index{detach@{detach}!HeartBeatSubject@{HeartBeatSubject}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Heart\+Beat\+Subject\+::detach (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractObserver}{Abstract\+Observer}} $>$}]{obs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Unsubscribes observer object from the current subject. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obs} & -\/ observer object to be unsubscribed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHeartBeatSubject_aeb1863b4d595a9e16cc0e3e099c67d68}\label{classHeartBeatSubject_aeb1863b4d595a9e16cc0e3e099c67d68}} 
+\index{HeartBeatSubject@{HeartBeatSubject}!notify\_all@{notify\_all}}
+\index{notify\_all@{notify\_all}!HeartBeatSubject@{HeartBeatSubject}}
+\doxysubsubsection{\texorpdfstring{notify\_all()}{notify\_all()}}
+{\footnotesize\ttfamily void Heart\+Beat\+Subject\+::notify\+\_\+all (\begin{DoxyParamCaption}\item[{std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}} $>$$>$}]{visitors }\end{DoxyParamCaption})}
+
+
+
+Notifies all registered observers about the heart beat event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitors} & -\/ list of visitors to be visiting registered observers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{HeartBeatSubject_8h}{Heart\+Beat\+Subject.\+h}}\item 
+src/\mbox{\hyperlink{HeartBeatSubject_8cpp}{Heart\+Beat\+Subject.\+cpp}}\end{DoxyCompactItemize}

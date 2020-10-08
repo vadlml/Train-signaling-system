@@ -1,0 +1,95 @@
+\hypertarget{classSimulStateLogger}{}\doxysection{Simul\+State\+Logger Class Reference}
+\label{classSimulStateLogger}\index{SimulStateLogger@{SimulStateLogger}}
+Inheritance diagram for Simul\+State\+Logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSimulStateLogger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimulStateLogger_a8073c460f3323b7b57cab054818881c0}\label{classSimulStateLogger_a8073c460f3323b7b57cab054818881c0}} 
+{\bfseries Simul\+State\+Logger} (std\+::ostream \&out\+\_\+stream)
+\item 
+void \mbox{\hyperlink{classSimulStateLogger_a665403ef75247dcf1897718383d14fb4}{visit\+\_\+train}} (\mbox{\hyperlink{classTrain}{Train}} \&train) override
+\begin{DoxyCompactList}\small\item\em train logger visit method implementation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSimulStateLogger_af9a7eb00de66d4030ce927ea1c3107d8}{visit\+\_\+signal}} (\mbox{\hyperlink{classSignal}{Signal}} \&signal) override
+\begin{DoxyCompactList}\small\item\em signal logger visit method implementation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSimulStateLogger_a9d2de5eda9f7eb0f63ad19e3d24cbe18}{visit\+\_\+junction}} (\mbox{\hyperlink{classTrackJunction}{Track\+Junction}} \&junction) override
+\begin{DoxyCompactList}\small\item\em junction logger visit method implementation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSimulStateLogger_a9d2de5eda9f7eb0f63ad19e3d24cbe18}\label{classSimulStateLogger_a9d2de5eda9f7eb0f63ad19e3d24cbe18}} 
+\index{SimulStateLogger@{SimulStateLogger}!visit\_junction@{visit\_junction}}
+\index{visit\_junction@{visit\_junction}!SimulStateLogger@{SimulStateLogger}}
+\doxysubsubsection{\texorpdfstring{visit\_junction()}{visit\_junction()}}
+{\footnotesize\ttfamily void Simul\+State\+Logger\+::visit\+\_\+junction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTrackJunction}{Track\+Junction}} \&}]{junction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+junction logger visit method implementation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em junction} & -\/ junction visitor object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}}.
+
+\mbox{\Hypertarget{classSimulStateLogger_af9a7eb00de66d4030ce927ea1c3107d8}\label{classSimulStateLogger_af9a7eb00de66d4030ce927ea1c3107d8}} 
+\index{SimulStateLogger@{SimulStateLogger}!visit\_signal@{visit\_signal}}
+\index{visit\_signal@{visit\_signal}!SimulStateLogger@{SimulStateLogger}}
+\doxysubsubsection{\texorpdfstring{visit\_signal()}{visit\_signal()}}
+{\footnotesize\ttfamily void Simul\+State\+Logger\+::visit\+\_\+signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSignal}{Signal}} \&}]{signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+signal logger visit method implementation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em junction} & -\/ signal visitor object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}}.
+
+\mbox{\Hypertarget{classSimulStateLogger_a665403ef75247dcf1897718383d14fb4}\label{classSimulStateLogger_a665403ef75247dcf1897718383d14fb4}} 
+\index{SimulStateLogger@{SimulStateLogger}!visit\_train@{visit\_train}}
+\index{visit\_train@{visit\_train}!SimulStateLogger@{SimulStateLogger}}
+\doxysubsubsection{\texorpdfstring{visit\_train()}{visit\_train()}}
+{\footnotesize\ttfamily void Simul\+State\+Logger\+::visit\+\_\+train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTrain}{Train}} \&}]{train }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+train logger visit method implementation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em train} & -\/ train visitor object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{SimulStateLogger_8h}{Simul\+State\+Logger.\+h}}\item 
+src/\mbox{\hyperlink{SimulStateLogger_8cpp}{Simul\+State\+Logger.\+cpp}}\end{DoxyCompactItemize}

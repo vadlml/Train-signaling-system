@@ -1,0 +1,112 @@
+\hypertarget{classSimulEngine}{}\doxysection{Simul\+Engine Class Reference}
+\label{classSimulEngine}\index{SimulEngine@{SimulEngine}}
+Inheritance diagram for Simul\+Engine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSimulEngine}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classSimulEngine_a691166e86cd9b5399f3a8ea68c3c9483}{is\+\_\+line\+\_\+clear}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ start\+\_\+point, Train\+::\+Direction dir)
+\begin{DoxyCompactList}\small\item\em checks if the line is clear of trains starting from the given point \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSimulEngine_a499b19be4b6109fa38f98b22f146afda}{visit\+\_\+train}} (\mbox{\hyperlink{classTrain}{Train}} \&train) override
+\begin{DoxyCompactList}\small\item\em train logic implementation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSimulEngine_a6a40b0fffb10001b653bd92d03daafa9}{visit\+\_\+signal}} (\mbox{\hyperlink{classSignal}{Signal}} \&signal)
+\begin{DoxyCompactList}\small\item\em signal logic implementation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSimulEngine_a6b7354f836425255c194911b2117ac92}{visit\+\_\+junction}} (\mbox{\hyperlink{classTrackJunction}{Track\+Junction}} \&junction) override
+\begin{DoxyCompactList}\small\item\em junction logic implementation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSimulEngine_a691166e86cd9b5399f3a8ea68c3c9483}\label{classSimulEngine_a691166e86cd9b5399f3a8ea68c3c9483}} 
+\index{SimulEngine@{SimulEngine}!is\_line\_clear@{is\_line\_clear}}
+\index{is\_line\_clear@{is\_line\_clear}!SimulEngine@{SimulEngine}}
+\doxysubsubsection{\texorpdfstring{is\_line\_clear()}{is\_line\_clear()}}
+{\footnotesize\ttfamily bool Simul\+Engine\+::is\+\_\+line\+\_\+clear (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$}]{start\+\_\+point,  }\item[{Train\+::\+Direction}]{dir }\end{DoxyParamCaption})}
+
+
+
+checks if the line is clear of trains starting from the given point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal} & -\/ junction visitor object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSimulEngine_a6b7354f836425255c194911b2117ac92}\label{classSimulEngine_a6b7354f836425255c194911b2117ac92}} 
+\index{SimulEngine@{SimulEngine}!visit\_junction@{visit\_junction}}
+\index{visit\_junction@{visit\_junction}!SimulEngine@{SimulEngine}}
+\doxysubsubsection{\texorpdfstring{visit\_junction()}{visit\_junction()}}
+{\footnotesize\ttfamily void Simul\+Engine\+::visit\+\_\+junction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTrackJunction}{Track\+Junction}} \&}]{junction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+junction logic implementation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em junction} & -\/ junction visitor object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}}.
+
+\mbox{\Hypertarget{classSimulEngine_a6a40b0fffb10001b653bd92d03daafa9}\label{classSimulEngine_a6a40b0fffb10001b653bd92d03daafa9}} 
+\index{SimulEngine@{SimulEngine}!visit\_signal@{visit\_signal}}
+\index{visit\_signal@{visit\_signal}!SimulEngine@{SimulEngine}}
+\doxysubsubsection{\texorpdfstring{visit\_signal()}{visit\_signal()}}
+{\footnotesize\ttfamily void Simul\+Engine\+::visit\+\_\+signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSignal}{Signal}} \&}]{signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+signal logic implementation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal} & -\/ junction visitor object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}}.
+
+\mbox{\Hypertarget{classSimulEngine_a499b19be4b6109fa38f98b22f146afda}\label{classSimulEngine_a499b19be4b6109fa38f98b22f146afda}} 
+\index{SimulEngine@{SimulEngine}!visit\_train@{visit\_train}}
+\index{visit\_train@{visit\_train}!SimulEngine@{SimulEngine}}
+\doxysubsubsection{\texorpdfstring{visit\_train()}{visit\_train()}}
+{\footnotesize\ttfamily void Simul\+Engine\+::visit\+\_\+train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTrain}{Train}} \&}]{train }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+train logic implementation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em train} & -\/ train visitor object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{SimulEngine_8h}{Simul\+Engine.\+h}}\item 
+src/\mbox{\hyperlink{SimulEngine_8cpp}{Simul\+Engine.\+cpp}}\end{DoxyCompactItemize}

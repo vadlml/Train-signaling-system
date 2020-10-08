@@ -1,0 +1,116 @@
+\hypertarget{classSignal}{}\doxysection{Signal Class Reference}
+\label{classSignal}\index{Signal@{Signal}}
+Inheritance diagram for Signal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSignal}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSignal_aff3f5f7272783a463fd0d414b54c450f}\label{classSignal_aff3f5f7272783a463fd0d414b54c450f}} 
+enum {\bfseries State} \{ {\bfseries STATE\+\_\+\+RED}, 
+{\bfseries STATE\+\_\+\+GREEN}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSignal_a227ab64fa58d3ef187ca6f1b9a9ffaf8}{Signal}} (\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&subject, int id, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ track\+\_\+point)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSignal}{Signal}} class constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSignal_ae3f57b42312731c55dbc749399fa1e40}\label{classSignal_ae3f57b42312731c55dbc749399fa1e40}} 
+const State {\bfseries get\+\_\+state} (void) const
+\item 
+\mbox{\Hypertarget{classSignal_aad1806e5e2fb79fd2e5833106236abd7}\label{classSignal_aad1806e5e2fb79fd2e5833106236abd7}} 
+void {\bfseries set\+\_\+state} (State state)
+\item 
+void \mbox{\hyperlink{classSignal_adddedc21dc445d724b430b5f74916c80}{accept}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}} $>$ visitor) override
+\begin{DoxyCompactList}\small\item\em Get accepts the visitor object and runs on needed visiting method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSignal_ad2568ee0c415d5cdd91b9f4e8b5203cc}\label{classSignal_ad2568ee0c415d5cdd91b9f4e8b5203cc}} 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ \& {\bfseries get\+\_\+track\+\_\+point} () const
+\item 
+\mbox{\Hypertarget{classSignal_a63a8ada3f713f2257737edf582eb80ab}\label{classSignal_a63a8ada3f713f2257737edf582eb80ab}} 
+int {\bfseries get\+\_\+id} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSignal}{Signal}} $>$ \mbox{\hyperlink{classSignal_a28eb4a7ee229746f0a96ae521e077708}{create}} (\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&subject, int id, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ track\+\_\+point)
+\begin{DoxyCompactList}\small\item\em instantiates a \mbox{\hyperlink{classSignal}{Signal}} object and subscribes it to an observer subject \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSignal_a227ab64fa58d3ef187ca6f1b9a9ffaf8}\label{classSignal_a227ab64fa58d3ef187ca6f1b9a9ffaf8}} 
+\index{Signal@{Signal}!Signal@{Signal}}
+\index{Signal@{Signal}!Signal@{Signal}}
+\doxysubsubsection{\texorpdfstring{Signal()}{Signal()}}
+{\footnotesize\ttfamily Signal\+::\+Signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&}]{subject,  }\item[{int}]{id,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$}]{track\+\_\+point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classSignal}{Signal}} class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & -\/ subject to subscribe this signal to \\
+\hline
+{\em id} & -\/ signal\textquotesingle{}s id \\
+\hline
+{\em track\+\_\+point} & -\/ a pointer to the associated with this signal track point object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSignal_adddedc21dc445d724b430b5f74916c80}\label{classSignal_adddedc21dc445d724b430b5f74916c80}} 
+\index{Signal@{Signal}!accept@{accept}}
+\index{accept@{accept}!Signal@{Signal}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Signal\+::accept (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}} $>$}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get accepts the visitor object and runs on needed visiting method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitor} & -\/ visitor object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classHeartBeatObserver}{Heart\+Beat\+Observer}}.
+
+\mbox{\Hypertarget{classSignal_a28eb4a7ee229746f0a96ae521e077708}\label{classSignal_a28eb4a7ee229746f0a96ae521e077708}} 
+\index{Signal@{Signal}!create@{create}}
+\index{create@{create}!Signal@{Signal}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classSignal}{Signal}}$>$ Signal\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&}]{subject,  }\item[{int}]{id,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$}]{track\+\_\+point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+instantiates a \mbox{\hyperlink{classSignal}{Signal}} object and subscribes it to an observer subject 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & -\/ subject to subscribe this signal to \\
+\hline
+{\em id} & -\/ signal\textquotesingle{}s id \\
+\hline
+{\em track\+\_\+point} & -\/ a pointer to the associated with this signal track point object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Signal$>$ -\/ a pointer to created object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Signal_8h}{Signal.\+h}}\item 
+src/\mbox{\hyperlink{Signal_8cpp}{Signal.\+cpp}}\end{DoxyCompactItemize}

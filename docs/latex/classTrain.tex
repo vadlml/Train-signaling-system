@@ -1,0 +1,153 @@
+\hypertarget{classTrain}{}\doxysection{Train Class Reference}
+\label{classTrain}\index{Train@{Train}}
+Inheritance diagram for Train\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classTrain}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTrain_a0feb0998f31eff6d079866cec060cf58}\label{classTrain_a0feb0998f31eff6d079866cec060cf58}} 
+enum {\bfseries State} \{ {\bfseries STATE\+\_\+\+WAITING}, 
+{\bfseries STATE\+\_\+\+RUNNING}, 
+{\bfseries STATE\+\_\+\+STOPPED}, 
+{\bfseries STATE\+\_\+\+CRASHED}
+ \}
+\item 
+\mbox{\Hypertarget{classTrain_a455fa92d88ccabd08223ac3a595cd0be}\label{classTrain_a455fa92d88ccabd08223ac3a595cd0be}} 
+enum {\bfseries Direction} \{ {\bfseries DIR\+\_\+\+FORWARD}, 
+{\bfseries DIR\+\_\+\+REVERSE}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTrain_a4cd4e27a674bea2a89ab61fe76303813}{Train}} (\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&subject, int id, Direction dir, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ start\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Trains class constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTrain_a6db124f3bde8359fd6b852f49d4e27e3}\label{classTrain_a6db124f3bde8359fd6b852f49d4e27e3}} 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ {\bfseries get\+\_\+current\+\_\+point} (void) const
+\item 
+\mbox{\Hypertarget{classTrain_af6c5647cc028cdc40abe898190d5fadf}\label{classTrain_af6c5647cc028cdc40abe898190d5fadf}} 
+State {\bfseries get\+\_\+state} (void)
+\item 
+void \mbox{\hyperlink{classTrain_a82dcdedc066e531c2f24b6e07786e3b6}{accept}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}} $>$ visitor) override
+\begin{DoxyCompactList}\small\item\em Get accepts the visitor object and runs on needed visiting method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTrain_a75a793420a1cc9a7cd9c6cb615e69864}\label{classTrain_a75a793420a1cc9a7cd9c6cb615e69864}} 
+Direction {\bfseries get\+\_\+dir} () const
+\item 
+\mbox{\Hypertarget{classTrain_ac2c7b02133901dcf1c4f1a4da93db985}\label{classTrain_ac2c7b02133901dcf1c4f1a4da93db985}} 
+void {\bfseries set\+\_\+state} (State state)
+\item 
+\mbox{\Hypertarget{classTrain_a2ee847f0c450b02f4c7820b1186b0e31}\label{classTrain_a2ee847f0c450b02f4c7820b1186b0e31}} 
+void {\bfseries set\+\_\+curr\+\_\+point} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ \&curr\+Point)
+\item 
+\mbox{\Hypertarget{classTrain_a1ace487b2a0958c85d3998ac5ac51dfd}\label{classTrain_a1ace487b2a0958c85d3998ac5ac51dfd}} 
+int {\bfseries get\+\_\+id} () const
+\item 
+void \mbox{\hyperlink{classTrain_a6e4ad1f391d747ce485139e6fa41214f}{move}} (void)
+\begin{DoxyCompactList}\small\item\em moves train to next track point \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrain}{Train}} $>$ \mbox{\hyperlink{classTrain_a36d6de016760a189a2ba7c8d7aba7ab7}{create}} (\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&subject, int id, Direction dir, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ start\+\_\+point)
+\begin{DoxyCompactList}\small\item\em instantiates a train object and subscribes it to an observer subject \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTrain_a4cd4e27a674bea2a89ab61fe76303813}\label{classTrain_a4cd4e27a674bea2a89ab61fe76303813}} 
+\index{Train@{Train}!Train@{Train}}
+\index{Train@{Train}!Train@{Train}}
+\doxysubsubsection{\texorpdfstring{Train()}{Train()}}
+{\footnotesize\ttfamily Train\+::\+Train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&}]{subject,  }\item[{int}]{id,  }\item[{Direction}]{dir,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$}]{start\+\_\+point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trains class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & -\/ subject to subscribe this train to \\
+\hline
+{\em id} & -\/ train\textquotesingle{}s id \\
+\hline
+{\em dir} & -\/ train\textquotesingle{}s direction \\
+\hline
+{\em start\+\_\+point} & -\/ a pointer to train\textquotesingle{}s starting point \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTrain_a82dcdedc066e531c2f24b6e07786e3b6}\label{classTrain_a82dcdedc066e531c2f24b6e07786e3b6}} 
+\index{Train@{Train}!accept@{accept}}
+\index{accept@{accept}!Train@{Train}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Train\+::accept (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}} $>$}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get accepts the visitor object and runs on needed visiting method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitor} & -\/ visitor object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classHeartBeatObserver}{Heart\+Beat\+Observer}}.
+
+\mbox{\Hypertarget{classTrain_a36d6de016760a189a2ba7c8d7aba7ab7}\label{classTrain_a36d6de016760a189a2ba7c8d7aba7ab7}} 
+\index{Train@{Train}!create@{create}}
+\index{create@{create}!Train@{Train}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classTrain}{Train}}$>$ Train\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&}]{subject,  }\item[{int}]{id,  }\item[{Direction}]{dir,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$}]{start\+\_\+point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+instantiates a train object and subscribes it to an observer subject 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subject} & -\/ subject to subscribe this train to \\
+\hline
+{\em id} & -\/ train\textquotesingle{}s id \\
+\hline
+{\em dir} & -\/ train\textquotesingle{}s direction \\
+\hline
+{\em start\+\_\+point} & -\/ a pointer to train\textquotesingle{}s starting point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Train$>$ -\/ a pointer to created object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTrain_a6e4ad1f391d747ce485139e6fa41214f}\label{classTrain_a6e4ad1f391d747ce485139e6fa41214f}} 
+\index{Train@{Train}!move@{move}}
+\index{move@{move}!Train@{Train}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Train\+::move (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+moves train to next track point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Train_8h}{Train.\+h}}\item 
+src/\mbox{\hyperlink{Train_8cpp}{Train.\+cpp}}\end{DoxyCompactItemize}
