@@ -17,8 +17,6 @@ enum {\bfseries Switch\+Position} \{ {\bfseries SWITCH\+\_\+\+POS\+\_\+\+MAIN},
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTrackJunction_a12faed1f048ea3530ed11e5e60a3ea2d}{Track\+Junction}} (\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&subject, int id)
-\begin{DoxyCompactList}\small\item\em track junction constructor \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTrackJunction_af50a800f5708f760567b3b017524c167}\label{classTrackJunction_af50a800f5708f760567b3b017524c167}} 
 void {\bfseries set\+\_\+next\+\_\+secondary} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ next\+\_\+switched)
 \item 
@@ -29,7 +27,7 @@ void {\bfseries make\+\_\+switch} (Switch\+Position switch\+\_\+pos)
 const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ \& {\bfseries get\+\_\+next\+\_\+secondary} () const
 \item 
 void \mbox{\hyperlink{classTrackJunction_abd82de8c749515989c947948c6198bba}{accept}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}} $>$ visitor)
-\begin{DoxyCompactList}\small\item\em Get accepts the visitor object and runs on needed visiting method. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em accepts the visitor object and runs the needed visiting method on it \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTrackJunction_a7088e363e359f53f842b513ba494b695}\label{classTrackJunction_a7088e363e359f53f842b513ba494b695}} 
 Switch\+Position {\bfseries get\+\_\+switch\+\_\+pos} () const
 \end{DoxyCompactItemize}
@@ -41,26 +39,6 @@ static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackJunction}{Track\+Jun
 \doxysubsection*{Additional Inherited Members}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTrackJunction_a12faed1f048ea3530ed11e5e60a3ea2d}\label{classTrackJunction_a12faed1f048ea3530ed11e5e60a3ea2d}} 
-\index{TrackJunction@{TrackJunction}!TrackJunction@{TrackJunction}}
-\index{TrackJunction@{TrackJunction}!TrackJunction@{TrackJunction}}
-\doxysubsubsection{\texorpdfstring{TrackJunction()}{TrackJunction()}}
-{\footnotesize\ttfamily Track\+Junction\+::\+Track\+Junction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&}]{subject,  }\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-track junction constructor 
-
-
-\begin{DoxyParams}{Parameters}
-{\em subject} & -\/ subject to subscribe this junction to \\
-\hline
-{\em id} & -\/ junction\textquotesingle{}s id \\
-\hline
-\end{DoxyParams}
-
-
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classTrackJunction_abd82de8c749515989c947948c6198bba}\label{classTrackJunction_abd82de8c749515989c947948c6198bba}} 
 \index{TrackJunction@{TrackJunction}!accept@{accept}}
@@ -70,7 +48,7 @@ track junction constructor
 
 
 
-Get accepts the visitor object and runs on needed visiting method. 
+accepts the visitor object and runs the needed visiting method on it 
 
 
 \begin{DoxyParams}{Parameters}

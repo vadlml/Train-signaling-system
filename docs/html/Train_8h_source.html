@@ -94,57 +94,57 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        DIR_FORWARD, DIR_REVERSE,</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classTrain.html#a4cd4e27a674bea2a89ab61fe76303813">   42</a></span>&#160;    <a class="code" href="classTrain.html#a4cd4e27a674bea2a89ab61fe76303813">Train</a>(<a class="code" href="classHeartBeatSubject.html">HeartBeatSubject</a> &amp;subject, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, Direction dir,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            std::shared_ptr&lt;TrackPoint&gt; start_point) :</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="classHeartBeatObserver.html">HeartBeatObserver</a>(subject), _id(id), _dir(dir), _curr_point(</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    start_point)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        _curr_point-&gt;occupy();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classTrain.html#a36d6de016760a189a2ba7c8d7aba7ab7">   58</a></span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;Train&gt; <a class="code" href="classTrain.html#a36d6de016760a189a2ba7c8d7aba7ab7">create</a>(<a class="code" href="classHeartBeatSubject.html">HeartBeatSubject</a> &amp;subject, <span class="keywordtype">int</span> <span class="keywordtype">id</span>,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            Direction dir, std::shared_ptr&lt;TrackPoint&gt; start_point)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">auto</span> ptr = std::make_shared&lt;Train&gt;(subject, <span class="keywordtype">id</span>, dir, start_point);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        subject.<a class="code" href="classHeartBeatSubject.html#a1b82bfbc63f1c965e101659938edc3d7">attach</a>(ptr);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> ptr;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;TrackPoint&gt; get_current_point(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> _curr_point;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    State get_state(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> _state;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTrain.html#a82dcdedc066e531c2f24b6e07786e3b6">accept</a>(<span class="keyword">const</span> std::shared_ptr&lt;AbstractVisitor&gt; visitor) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classTrain.html#a36d6de016760a189a2ba7c8d7aba7ab7">   43</a></span>&#160;    <span class="keyword">static</span> std::shared_ptr&lt;Train&gt; <a class="code" href="classTrain.html#a36d6de016760a189a2ba7c8d7aba7ab7">create</a>(<a class="code" href="classHeartBeatSubject.html">HeartBeatSubject</a> &amp;subject, <span class="keywordtype">int</span> <span class="keywordtype">id</span>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            Direction dir, std::shared_ptr&lt;TrackPoint&gt; start_point)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">auto</span> ptr = std::shared_ptr&lt;Train&gt;(<span class="keyword">new</span> <a class="code" href="classTrain.html">Train</a>(subject, <span class="keywordtype">id</span>, dir, start_point));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        subject.<a class="code" href="classHeartBeatSubject.html#a1b82bfbc63f1c965e101659938edc3d7">attach</a>(ptr);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> std::shared_ptr&lt;TrackPoint&gt; get_current_point(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> _curr_point;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    State get_state(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> _state;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTrain.html#a82dcdedc066e531c2f24b6e07786e3b6">accept</a>(<span class="keyword">const</span> std::shared_ptr&lt;AbstractVisitor&gt; visitor) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    Direction get_dir()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> _dir;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> set_state(State state)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        _state = state;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> set_curr_point(<span class="keyword">const</span> std::shared_ptr&lt;TrackPoint&gt; &amp;currPoint)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        _curr_point = currPoint;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Direction get_dir()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> get_id()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> _dir;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> _id;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> set_state(State state)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        _state = state;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> set_curr_point(<span class="keyword">const</span> std::shared_ptr&lt;TrackPoint&gt; &amp;currPoint)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        _curr_point = currPoint;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> get_id()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> _id;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTrain.html#a6e4ad1f391d747ce485139e6fa41214f">move</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classTrain.html">Train</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTrain.html#a6e4ad1f391d747ce485139e6fa41214f">move</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classTrain.html">Train</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classTrain.html">Train</a>(<a class="code" href="classHeartBeatSubject.html">HeartBeatSubject</a> &amp;subject, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, Direction dir,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            std::shared_ptr&lt;TrackPoint&gt; start_point) :</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="classHeartBeatObserver.html">HeartBeatObserver</a>(subject), _id(id), _dir(dir), _curr_point(</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    start_point)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        _curr_point-&gt;occupy();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">int</span> _id;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    State _state = STATE_RUNNING;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Direction _dir = DIR_FORWARD;</div>
@@ -154,10 +154,9 @@ $(function() {
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* TRAIN_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassHeartBeatObserver_html"><div class="ttname"><a href="classHeartBeatObserver.html">HeartBeatObserver</a></div><div class="ttdef"><b>Definition:</b> HeartBeatObserver.h:19</div></div>
-<div class="ttc" id="aclassTrain_html_a36d6de016760a189a2ba7c8d7aba7ab7"><div class="ttname"><a href="classTrain.html#a36d6de016760a189a2ba7c8d7aba7ab7">Train::create</a></div><div class="ttdeci">static std::shared_ptr&lt; Train &gt; create(HeartBeatSubject &amp;subject, int id, Direction dir, std::shared_ptr&lt; TrackPoint &gt; start_point)</div><div class="ttdoc">instantiates a train object and subscribes it to an observer subject</div><div class="ttdef"><b>Definition:</b> Train.h:58</div></div>
+<div class="ttc" id="aclassTrain_html_a36d6de016760a189a2ba7c8d7aba7ab7"><div class="ttname"><a href="classTrain.html#a36d6de016760a189a2ba7c8d7aba7ab7">Train::create</a></div><div class="ttdeci">static std::shared_ptr&lt; Train &gt; create(HeartBeatSubject &amp;subject, int id, Direction dir, std::shared_ptr&lt; TrackPoint &gt; start_point)</div><div class="ttdoc">instantiates a train object and subscribes it to an observer subject</div><div class="ttdef"><b>Definition:</b> Train.h:43</div></div>
 <div class="ttc" id="aTrackPoint_8h_html"><div class="ttname"><a href="TrackPoint_8h.html">TrackPoint.h</a></div><div class="ttdoc">Track Point class declaration.</div></div>
-<div class="ttc" id="aclassTrain_html_a4cd4e27a674bea2a89ab61fe76303813"><div class="ttname"><a href="classTrain.html#a4cd4e27a674bea2a89ab61fe76303813">Train::Train</a></div><div class="ttdeci">Train(HeartBeatSubject &amp;subject, int id, Direction dir, std::shared_ptr&lt; TrackPoint &gt; start_point)</div><div class="ttdoc">Trains class constructor.</div><div class="ttdef"><b>Definition:</b> Train.h:42</div></div>
-<div class="ttc" id="aclassTrain_html_a82dcdedc066e531c2f24b6e07786e3b6"><div class="ttname"><a href="classTrain.html#a82dcdedc066e531c2f24b6e07786e3b6">Train::accept</a></div><div class="ttdeci">void accept(const std::shared_ptr&lt; AbstractVisitor &gt; visitor) override</div><div class="ttdoc">Get accepts the visitor object and runs on needed visiting method.</div><div class="ttdef"><b>Definition:</b> Train.cpp:22</div></div>
+<div class="ttc" id="aclassTrain_html_a82dcdedc066e531c2f24b6e07786e3b6"><div class="ttname"><a href="classTrain.html#a82dcdedc066e531c2f24b6e07786e3b6">Train::accept</a></div><div class="ttdeci">void accept(const std::shared_ptr&lt; AbstractVisitor &gt; visitor) override</div><div class="ttdoc">accepts the visitor object and runs the needed visiting method on it</div><div class="ttdef"><b>Definition:</b> Train.cpp:22</div></div>
 <div class="ttc" id="aclassHeartBeatSubject_html"><div class="ttname"><a href="classHeartBeatSubject.html">HeartBeatSubject</a></div><div class="ttdef"><b>Definition:</b> HeartBeatSubject.h:21</div></div>
 <div class="ttc" id="aclassTrain_html_a6e4ad1f391d747ce485139e6fa41214f"><div class="ttname"><a href="classTrain.html#a6e4ad1f391d747ce485139e6fa41214f">Train::move</a></div><div class="ttdeci">void move(void)</div><div class="ttdoc">moves train to next track point</div><div class="ttdef"><b>Definition:</b> Train.cpp:33</div></div>
 <div class="ttc" id="aclassTrain_html"><div class="ttname"><a href="classTrain.html">Train</a></div><div class="ttdef"><b>Definition:</b> Train.h:21</div></div>

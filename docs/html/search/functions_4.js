@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['log_5fjunction_93',['log_junction',['../classEventLogger.html#a6878076bfde6987caa2858a3cbc5da5b',1,'EventLogger']]],
-  ['log_5fsignal_94',['log_signal',['../classEventLogger.html#a928fe6d1953003c575cf8e4a07270e55',1,'EventLogger']]],
-  ['log_5ftrain_95',['log_train',['../classEventLogger.html#a3f10287aeeb1ed907ebd99810e09bd32',1,'EventLogger']]]
+  ['is_5fline_5fclear_107',['is_line_clear',['../classSimulEngine.html#a691166e86cd9b5399f3a8ea68c3c9483',1,'SimulEngine']]]
 ];

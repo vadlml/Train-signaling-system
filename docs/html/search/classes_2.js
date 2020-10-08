@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['heartbeatobserver_54',['HeartBeatObserver',['../classHeartBeatObserver.html',1,'']]],
-  ['heartbeatsubject_55',['HeartBeatSubject',['../classHeartBeatSubject.html',1,'']]]
+  ['heartbeatobserver_64',['HeartBeatObserver',['../classHeartBeatObserver.html',1,'']]],
+  ['heartbeatsubject_65',['HeartBeatSubject',['../classHeartBeatSubject.html',1,'']]]
 ];

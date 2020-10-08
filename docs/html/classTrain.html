@@ -98,9 +98,6 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4cd4e27a674bea2a89ab61fe76303813"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrain.html#a4cd4e27a674bea2a89ab61fe76303813">Train</a> (<a class="el" href="classHeartBeatSubject.html">HeartBeatSubject</a> &amp;subject, int id, Direction dir, std::shared_ptr&lt; <a class="el" href="classTrackPoint.html">TrackPoint</a> &gt; start_point)</td></tr>
-<tr class="memdesc:a4cd4e27a674bea2a89ab61fe76303813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trains class constructor.  <a href="classTrain.html#a4cd4e27a674bea2a89ab61fe76303813">More...</a><br /></td></tr>
-<tr class="separator:a4cd4e27a674bea2a89ab61fe76303813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6db124f3bde8359fd6b852f49d4e27e3"><td class="memItemLeft" align="right" valign="top"><a id="a6db124f3bde8359fd6b852f49d4e27e3"></a>
 const std::shared_ptr&lt; <a class="el" href="classTrackPoint.html">TrackPoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_current_point</b> (void) const</td></tr>
 <tr class="separator:a6db124f3bde8359fd6b852f49d4e27e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,7 +105,7 @@ const std::shared_ptr&lt; <a class="el" href="classTrackPoint.html">TrackPoint</
 State&#160;</td><td class="memItemRight" valign="bottom"><b>get_state</b> (void)</td></tr>
 <tr class="separator:af6c5647cc028cdc40abe898190d5fadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82dcdedc066e531c2f24b6e07786e3b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTrain.html#a82dcdedc066e531c2f24b6e07786e3b6">accept</a> (const std::shared_ptr&lt; <a class="el" href="classAbstractVisitor.html">AbstractVisitor</a> &gt; visitor) override</td></tr>
-<tr class="memdesc:a82dcdedc066e531c2f24b6e07786e3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get accepts the visitor object and runs on needed visiting method.  <a href="classTrain.html#a82dcdedc066e531c2f24b6e07786e3b6">More...</a><br /></td></tr>
+<tr class="memdesc:a82dcdedc066e531c2f24b6e07786e3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">accepts the visitor object and runs the needed visiting method on it  <a href="classTrain.html#a82dcdedc066e531c2f24b6e07786e3b6">More...</a><br /></td></tr>
 <tr class="separator:a82dcdedc066e531c2f24b6e07786e3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75a793420a1cc9a7cd9c6cb615e69864"><td class="memItemLeft" align="right" valign="top"><a id="a75a793420a1cc9a7cd9c6cb615e69864"></a>
 Direction&#160;</td><td class="memItemRight" valign="bottom"><b>get_dir</b> () const</td></tr>
@@ -143,66 +140,6 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="classHeartBeatSubject.html">HeartBeatSubject</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_subject</b></td></tr>
 <tr class="separator:adbed4df34789e1968c70bfefaf594ced inherit pro_attribs_classHeartBeatObserver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4cd4e27a674bea2a89ab61fe76303813"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cd4e27a674bea2a89ab61fe76303813">&#9670;&nbsp;</a></span>Train()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Train::Train </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classHeartBeatSubject.html">HeartBeatSubject</a> &amp;&#160;</td>
-          <td class="paramname"><em>subject</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Direction&#160;</td>
-          <td class="paramname"><em>dir</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classTrackPoint.html">TrackPoint</a> &gt;&#160;</td>
-          <td class="paramname"><em>start_point</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Trains class constructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">subject</td><td>- subject to subscribe this train to </td></tr>
-    <tr><td class="paramname">id</td><td>- train's id </td></tr>
-    <tr><td class="paramname">dir</td><td>- train's direction </td></tr>
-    <tr><td class="paramname">start_point</td><td>- a pointer to train's starting point </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a82dcdedc066e531c2f24b6e07786e3b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82dcdedc066e531c2f24b6e07786e3b6">&#9670;&nbsp;</a></span>accept()</h2>
@@ -228,7 +165,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get accepts the visitor object and runs on needed visiting method. </p>
+<p>accepts the visitor object and runs the needed visiting method on it </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">visitor</td><td>- visitor object </td></tr>

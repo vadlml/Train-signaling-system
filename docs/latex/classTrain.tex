@@ -24,8 +24,6 @@ enum {\bfseries Direction} \{ {\bfseries DIR\+\_\+\+FORWARD},
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTrain_a4cd4e27a674bea2a89ab61fe76303813}{Train}} (\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&subject, int id, Direction dir, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ start\+\_\+point)
-\begin{DoxyCompactList}\small\item\em Trains class constructor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTrain_a6db124f3bde8359fd6b852f49d4e27e3}\label{classTrain_a6db124f3bde8359fd6b852f49d4e27e3}} 
 const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$ {\bfseries get\+\_\+current\+\_\+point} (void) const
 \item 
@@ -33,7 +31,7 @@ const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}}
 State {\bfseries get\+\_\+state} (void)
 \item 
 void \mbox{\hyperlink{classTrain_a82dcdedc066e531c2f24b6e07786e3b6}{accept}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classAbstractVisitor}{Abstract\+Visitor}} $>$ visitor) override
-\begin{DoxyCompactList}\small\item\em Get accepts the visitor object and runs on needed visiting method. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em accepts the visitor object and runs the needed visiting method on it \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTrain_a75a793420a1cc9a7cd9c6cb615e69864}\label{classTrain_a75a793420a1cc9a7cd9c6cb615e69864}} 
 Direction {\bfseries get\+\_\+dir} () const
 \item 
@@ -56,30 +54,6 @@ static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrain}{Train}} $>$ \mbox{
 \doxysubsection*{Additional Inherited Members}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTrain_a4cd4e27a674bea2a89ab61fe76303813}\label{classTrain_a4cd4e27a674bea2a89ab61fe76303813}} 
-\index{Train@{Train}!Train@{Train}}
-\index{Train@{Train}!Train@{Train}}
-\doxysubsubsection{\texorpdfstring{Train()}{Train()}}
-{\footnotesize\ttfamily Train\+::\+Train (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHeartBeatSubject}{Heart\+Beat\+Subject}} \&}]{subject,  }\item[{int}]{id,  }\item[{Direction}]{dir,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTrackPoint}{Track\+Point}} $>$}]{start\+\_\+point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Trains class constructor. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em subject} & -\/ subject to subscribe this train to \\
-\hline
-{\em id} & -\/ train\textquotesingle{}s id \\
-\hline
-{\em dir} & -\/ train\textquotesingle{}s direction \\
-\hline
-{\em start\+\_\+point} & -\/ a pointer to train\textquotesingle{}s starting point \\
-\hline
-\end{DoxyParams}
-
-
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classTrain_a82dcdedc066e531c2f24b6e07786e3b6}\label{classTrain_a82dcdedc066e531c2f24b6e07786e3b6}} 
 \index{Train@{Train}!accept@{accept}}
@@ -89,7 +63,7 @@ Trains class constructor.
 
 
 
-Get accepts the visitor object and runs on needed visiting method. 
+accepts the visitor object and runs the needed visiting method on it 
 
 
 \begin{DoxyParams}{Parameters}
