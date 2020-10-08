@@ -1,6 +1,7 @@
 # Simulation of a Train Signaling System:
-
-### Build
+### Documentation: 
+##### See documentation [here](https://vadlml.github.io/Train-signaling-system/)
+### Build:
 ```bash
 git clone https://github.com/vadlml/Train-signaling-system.git
 cd Train-signaling-system
@@ -68,11 +69,11 @@ input.json
 #### Corresponds to the following track lines:
 
 ```
-    (T0)          (S0)
+    (T0)           (S0)
 (0)--(1)--(2)--(3)--(4)--(5)--(6)
                 |             
                (7)--(8--(9) 
-                (S1)    (T1)
+               (S1)    (T1)
 ```
 #### Where: 
 ##### (T0), (T1) - Train0 and Train1
