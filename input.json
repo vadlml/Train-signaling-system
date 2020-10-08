@@ -1,0 +1,41 @@
+{
+	"lines": [
+		[
+			0,
+			1,
+			2,
+			3,
+			4, 
+			5,
+			6
+		],
+		[
+			3,
+			7,
+			8,
+			9
+		]
+	],
+	"trains": [
+		{
+			"id": 0,
+			"dir": "Forward",
+			"start_point id": 1
+		},
+		{
+			"id": 1,
+			"dir": "Reverse",
+			"start_point id": 9
+		}
+	],
+	"signals": [
+		{
+			"id": 0,
+			"point id": 4
+		},
+		{
+			"id": 1,
+			"point id": 7
+		}
+	]
+}
